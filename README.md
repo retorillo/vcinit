@@ -16,7 +16,7 @@ vcinit x86 8.1
 In addition, enables the following special variables:
 
 - `__VCVARSALL` (eg: `C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat`)
-- `__IDE_DIR` (eg: `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE`)
+- `__VS_DIR` (eg: `C:\Program Files (x86)\Microsoft Visual Studio 14.0\`)
 - `__VC_DIR` (eg: `C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC`)
 - `__VS_VER` (eg: `14.0`)
 
