@@ -13,7 +13,7 @@ set vcvarsall=
   set count=1
   :search_loop
   set vsver=
-  for /f "tokens=%count% delims=;eol=" %%d in ("%vsvers%") do set vsver=%%d
+  for /f "tokens=%count% delims=;^ eol=" %%d in ("%vsvers%") do set vsver=%%d
   if "!vsver!"=="" goto error
   set regquery=reg query %vshive% /v !vsver! && !regquery! 2> NUL > NUL
   if errorlevel 1 set /a count=count+1 && goto search_loop
@@ -24,7 +24,7 @@ set vcvarsall=
   if "!vcvarsall!"=="" goto error
 
 :apply
-  for /f "tokens=1-4 delims=;" %%a in ("!vcdir!;!vcvarsall!;!vsdir!;!vsver!") do (
+  for /f "tokens=1-4 delims=;^ eol=" %%a in ("!vcdir!;!vcvarsall!;!vsdir!;!vsver!") do (
     endlocal
     set __VC_DIR=%%a
     set __VCVARSALL=%%b

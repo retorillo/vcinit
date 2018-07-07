@@ -6,14 +6,17 @@ invoking C++ development environment configurator (vcvarsall).
 `vcinit` automatically detect latest Visual Studio on your machine, and invoke
 `vcvarsall.bat`.
 
-The following example configures environment to build x86 application with
-Windows 8.1 SDK.
+`vcinitut` is extended script to configure Visual Studio Unit Test Framework
+header and library directories.
+
+Run `vcinit` or `vcinitut` as follows:
 
 ```bat
 vcinit x86 8.1
+vcinitut x64
 ```
 
-In addition, enables the following special variables:
+These script enables the following special variables:
 
 - `__VCVARSALL` (eg: `C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat`)
 - `__VS_DIR` (eg: `C:\Program Files (x86)\Microsoft Visual Studio 14.0\`)
