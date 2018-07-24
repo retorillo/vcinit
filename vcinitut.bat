@@ -1,7 +1,7 @@
 @echo off
-setlocal enabledelayedexpansion
 call vcinit %*
 if not defined __VC_DIR goto error
+setlocal enabledelayedexpansion
 
 set utdirs=UnitTest\;Auxiliary\VS\UnitTest\;
 :search
